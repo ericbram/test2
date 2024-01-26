@@ -48,7 +48,7 @@ tomli==2.0.1
     #   pytest
 typing-extensions==4.4.0
     # via black
-werkzeug==2.2.2
+werkzeug==2.3.8
     # via flask
 zipp==3.10.0
     # via importlib-metadata
