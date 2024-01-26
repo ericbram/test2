@@ -8,3 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: make install
+      - name: Run linter
+        run: make lint
+      - name: Run tests and format check
+        run: make all
+      - name: Update requirements
+        run: make requirements
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: false
+          tags: energyhub:latest
