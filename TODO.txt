@@ -1,0 +1,4 @@
+# TODO
+- Properly configure Dependabot in the repository settings
+- Configure GitHub Security Center for code scanning
+- Use an image scanning tool (Snyk, AWS ECR, etc) after publishing image artifact
