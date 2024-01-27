@@ -15,7 +15,7 @@ jobs:
       - name: Run linter
         run: make lint
       - name: Run tests
-        run: make tests
+        run: make test
       - name: Update requirements
         run: make requirements
       - name: Build and push Docker image
