@@ -9,11 +9,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install dependencies
-        run: make install
+        run: |
+          make install
+          pip install pip-tools
       - name: Run linter
         run: make lint
-      - name: Run tests and format check
-        run: make all
+      - name: Run tests
+        run: make tests
       - name: Update requirements
         run: make requirements
       - name: Build and push Docker image
